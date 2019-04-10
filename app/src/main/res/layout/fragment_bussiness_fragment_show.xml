@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_marginStart="@dimen/_20sdp"
+                      android:layout_marginEnd="@dimen/_20sdp"
+                      android:layout_marginBottom="@dimen/_20sdp"
+                      android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:id="@+id/et_busssiness_name"
+                        android:textColor="@color/textcolour"
+                        android:hint="Business Name"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textIsSelectable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/textcolour"
+                        android:hint="Description"
+                        android:id="@+id/et_description"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textIsSelectable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_start_time"
+                        android:hint="Start Time"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_end_time"
+                        android:hint="End Time"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_opening_days"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textIsSelectable="false"
+                        android:hint="Advance Booking Opening days"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_featured"
+                        android:hint="Featured"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textIsSelectable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_service"
+                        android:hint="Service range in km"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:textIsSelectable="false"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

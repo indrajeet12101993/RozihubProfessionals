@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/logo"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/rel1"
+            android:layout_margin="@dimen/_20sdp"
+
+    >
+
+
+        <TextView
+                android:id="@+id/forgtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="20dp"
+                android:text="Please enter the otp code sent to"
+
+
+        />
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/txt_pin_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#605a43"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    app:pinLineColors="@android:color/black"
+                    android:cursorVisible="true"
+                    android:maxLength="6"
+                    android:backgroundTint="@android:color/black"
+
+            />
+
+
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VERIFY"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:id="@+id/btn_verify"
+                android:background="@drawable/round"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

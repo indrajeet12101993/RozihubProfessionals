@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorsplash"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="My Booking Details"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                   android:layout_centerInParent="true"
+                   android:padding="@dimen/_15sdp"
+                  android:layout_below="@+id/appbar"
+                  android:layout_marginTop="@dimen/_30sdp"
+                  android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:text="Booking Id: rozi1222"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Booking Date: Feb 09/2019"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Booking Time: 09:00"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Shop Name: Rozi Spa"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Service Name: Hair Spa"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Total Amount: Rs 500"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Status: Approved"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                  android:text="Commision: Rs 120"
+                  android:textSize="@dimen/_12sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_margin="@dimen/_2sdp"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

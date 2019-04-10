@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Create payment"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/_15sdp"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_alignParentStart="true"
+                  android:layout_height="wrap_content"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:textColor="@color/black"
+                  android:drawableTop="@drawable/ic_clear_black_24dp"
+                  android:layout_alignParentEnd="true"
+                  android:id="@+id/tv_close"
+                  android:padding="@dimen/_5sdp"
+                  android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:background="#68000000"
+          android:layout_height="1dp">
+    </View>
+
+    <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_paid_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:text="Paid by Hour"
+
+        />
+        <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_paid_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:text="Paid by Service"
+
+        />
+
+    </RadioGroup>
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/linear_paid_by_hour"
+                      android:focusableInTouchMode="true"
+                      android:layout_margin="@dimen/_20sdp"
+                      android:animateLayoutChanges="true"
+                      android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:id="@+id/et_service"
+                        android:textColor="@color/textcolour"
+                        android:hint="Select Work Hour(s)"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:textColor="@color/textcolour"
+                        android:hint="Total Amount"
+                        android:id="@+id/et_amount"
+                        android:maxLength="10"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:passwordToggleTint="#000000"
+                    android:id="@+id/tt_pasword"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:textColor="@color/textcolour"
+                        android:hint="Select Payment Mode"
+                        android:id="@+id/et_featured"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/linear_paid_by_service"
+                      android:visibility="gone"
+                      android:focusableInTouchMode="true"
+                      android:layout_margin="@dimen/_20sdp"
+                      android:animateLayoutChanges="true"
+                      android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/textcolour"
+
+                        android:hint="Service Description"
+                        android:id="@+id/et_service_description"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_total_amount"
+                        android:hint="Total Amount"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/textcolour"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/textcolour"
+                        android:id="@+id/et_payment_mode"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                        android:hint="Select Payment Mode"
+                        android:backgroundTint="@color/edittext_line_colour"
+                        android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content"
+                android:text="Submit"
+                android:background="@drawable/square_prvious"
+                android:textSize="14sp"
+                android:layout_toLeftOf="@+id/btclose"
+                android:layout_marginEnd="20dp"
+                android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:id="@+id/btn_submit"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="wrap_content"
+                android:text="Close"
+                android:background="@drawable/square"
+                android:textSize="14sp"
+                android:id="@+id/btclose"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>
